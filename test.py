@@ -1,4 +1,5 @@
-import PyPPM
+from PyPPM import ppmGenerator
+import time
 
 print "hello world"
 g = ppmGenerator()
