@@ -12,25 +12,24 @@ class ppmGenerator (threading.Thread):
         self.MINVALUE = 0
         self.MAXVALUE = 255
         self.lengths = [0,0,0,0,0,0,0,0]
-        self.stop = False
+        self.stopped = False
         self.framemaker()
-        PyAudio = pyaudio.PyAudio
-        p = PyAudio()
-        print p.get_default_output_device_info()
-        self.stream = p.open(format = p.get_format_from_width(1),
+        self.p = pyaudio.PyAudio()
+        print self.p.get_default_output_device_info()
+        self.stream = self.p.open(format = self.p.get_format_from_width(1),
            channels = 1,
            rate = self.BITRATE,
            output = True)
 
     def run(self):
-        while(not self.stop):
+        while(not self.stopped):
             self.write()
-        stream.stop_stream()
-        stream.close()
-        p.terminate()    
+        self.stream.stop_stream()
+        self.stream.close()
+        self.p.terminate()    
 
     def stop(self):
-        self.stop = true    #writes the current frame to the stream
+        self.stopped = True    #writes the current frame to the stream
 
     def write(self):
         self.stream.write(self.frame)    #sets the channel values
