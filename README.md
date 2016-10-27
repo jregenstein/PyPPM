@@ -5,8 +5,6 @@ TODO:
 
 *Get sample rate from sound card
 
-*Make stop function work
-
 *Allow client code defined input range
 
 *Set up for pip
