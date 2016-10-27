@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'audioppm',
   packages = ['audioppm'], # this must be the same as the name above
-  version = '0.2',
+  version = '0.3',
   description = 'Output PPM from the audio jack',
   author = 'Sean Carter and Jacob Regenstein',
   author_email = 'peterldowns@gmail.com',
