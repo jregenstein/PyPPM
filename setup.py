@@ -10,4 +10,6 @@ setup(
   download_url = 'https://github.com/jregenstein/PyPPM/tarball/0.1', # I'll explain this in a second
   keywords = ['ppm', 'audio', 'buddybox'], # arbitrary keywords
   classifiers = [],
+  license = 'MIT',
+  install_requires=['pyaudio'],
 )
