@@ -26,7 +26,7 @@ class ppmGenerator (threading.Thread):
             self.write()
         self.stream.stop_stream()
         self.stream.close()
-        self.p.terminate()    
+        self.p.terminate()
 
     def stop(self):
         self.stopped = True    #writes the current frame to the stream
